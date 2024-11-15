@@ -15904,10 +15904,7 @@
             shouldBrand = true;
           }
           if (shouldBrand && !isPhantom) {
-            brandElement = brandElement || createBadge();
-            ensureBrand();
-            setTimeout(ensureBrand, 500);
-            $(doc).off(fullScreenEvents, onFullScreenChange).on(fullScreenEvents, onFullScreenChange);
+            return;
           }
         };
         function onFullScreenChange() {
